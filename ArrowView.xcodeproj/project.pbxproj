@@ -13,6 +13,8 @@
 		F7220AD21A8C27C1003E7370 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7220AD11A8C27C1003E7370 /* Images.xcassets */; };
 		F7220AD51A8C27C1003E7370 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7220AD31A8C27C1003E7370 /* LaunchScreen.xib */; };
 		F7220AE11A8C27C1003E7370 /* ArrowViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7220AE01A8C27C1003E7370 /* ArrowViewTests.swift */; };
+		F7220AEC1A8C2800003E7370 /* JGArrow.m in Sources */ = {isa = PBXBuildFile; fileRef = F7220AEB1A8C2800003E7370 /* JGArrow.m */; };
+		F7220AF01A8C2CAF003E7370 /* ArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7220AEF1A8C2CAF003E7370 /* ArrowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,9 @@
 		F7220ADA1A8C27C1003E7370 /* ArrowViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrowViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7220ADF1A8C27C1003E7370 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7220AE01A8C27C1003E7370 /* ArrowViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowViewTests.swift; sourceTree = "<group>"; };
+		F7220AEA1A8C2800003E7370 /* JGArrow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JGArrow.h; path = ../../../JGKit/JGArrow.h; sourceTree = "<group>"; };
+		F7220AEB1A8C2800003E7370 /* JGArrow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JGArrow.m; path = ../../../JGKit/JGArrow.m; sourceTree = "<group>"; };
+		F7220AEF1A8C2CAF003E7370 /* ArrowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +82,15 @@
 		F7220AC71A8C27C1003E7370 /* ArrowView */ = {
 			isa = PBXGroup;
 			children = (
+				F7220AEA1A8C2800003E7370 /* JGArrow.h */,
+				F7220AEB1A8C2800003E7370 /* JGArrow.m */,
 				F7220ACA1A8C27C1003E7370 /* AppDelegate.swift */,
 				F7220ACC1A8C27C1003E7370 /* ViewController.swift */,
 				F7220ACE1A8C27C1003E7370 /* Main.storyboard */,
 				F7220AD11A8C27C1003E7370 /* Images.xcassets */,
 				F7220AD31A8C27C1003E7370 /* LaunchScreen.xib */,
 				F7220AC81A8C27C1003E7370 /* Supporting Files */,
+				F7220AEF1A8C2CAF003E7370 /* ArrowView.swift */,
 			);
 			path = ArrowView;
 			sourceTree = "<group>";
@@ -212,8 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7220AF01A8C2CAF003E7370 /* ArrowView.swift in Sources */,
 				F7220ACD1A8C27C1003E7370 /* ViewController.swift in Sources */,
 				F7220ACB1A8C27C1003E7370 /* AppDelegate.swift in Sources */,
+				F7220AEC1A8C2800003E7370 /* JGArrow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
