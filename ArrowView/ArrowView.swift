@@ -8,12 +8,55 @@
 
 import UIKit
 
-class ArrowView: UIView {
+enum ArrowDirection: Int {
+    case Up
+    case Down
+    case Left
+    case Right
+}
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    */
+class ArrowView: UIView {
+    
+    var direction: ArrowDirection = .Up {
+        didSet {
+            switch direction {
+            case .Up:
+                transform = CGAffineTransformIdentity
+            case .Down:
+                transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI))
+            case .Left:
+                transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI_2))
+            case .Right:
+                transform = CGAffineTransformRotate(CGAffineTransformIdentity, CGFloat(M_PI_2 * 3.0))
+            }
+            setNeedsDisplay()
+        }
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.backgroundColor = UIColor.clearColor()
+        self.direction = .Down
+        
+        // lots of gesture recognizers this one is tap
+        let tapGesutureRecognizer = UITapGestureRecognizer(target: self, action: Selector("rotateArrow"))
+        self.addGestureRecognizer(tapGesutureRecognizer)
+    }
+    
+    func rotateArrow() {
+        switch direction {
+        case .Up:
+            self.direction = .Right
+        case .Down:
+            self.direction = .Left
+        case .Left:
+            self.direction = .Up
+        case .Right:
+            self.direction = .Down
+        }
+    }
+
     override func drawRect(rect: CGRect) {
         // Drawing code
         let currentContext: CGContextRef  = UIGraphicsGetCurrentContext()
