@@ -41,6 +41,7 @@ class ArrowView: UIView {
         self.layer.borderWidth = 4.0
         self.layer.borderColor = UIColor.whiteColor().CGColor
         self.direction = .Down
+        self.clipsToBounds = true
         
         // lots of gesture recognizers this one is tap
         let tapGesutureRecognizer = UITapGestureRecognizer(target: self, action: Selector("rotateArrow"))
