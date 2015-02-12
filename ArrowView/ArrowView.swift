@@ -36,7 +36,10 @@ class ArrowView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.backgroundColor = UIColor.clearColor()
+        self.backgroundColor = UIColor.blueColor()
+        self.layer.cornerRadius = 10.0
+        self.layer.borderWidth = 4.0
+        self.layer.borderColor = UIColor.whiteColor().CGColor
         self.direction = .Down
         
         // lots of gesture recognizers this one is tap
